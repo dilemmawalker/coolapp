@@ -1,0 +1,26 @@
+Maven is used for build management & dependencies.
+
+Using Maven we don't need to download additional jar files seperately, rather we add dependency in pom.xml
+& whenever the project is executed, maven downloads the individual jars & takes care of management.
+
+
+
+
+
+POM file structure:
+a. Project name, version etc.
+b. dependencies list
+c. Plugins, test reports, etc.
+
+Project Coordinates: groudId, artifactId, version  (GAV)
+GAV is used to uniquely identify a project.
+Example:
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-parent</artifactId>
+<version>3.3.0</version>
+
+Use https://central.sonatype.com/ to get list of dependencies for a particular maven version.
+
+
+There are multiple spring boot actuator endpoints which are exposed to help with application status, health, etc.
+
