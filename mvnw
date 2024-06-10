@@ -23,9 +23,9 @@
 #
 # Optional ENV vars
 # -----------------
-#   JAVA_HOME - location of a JDK home dir, required when download maven document via java source
-#   MVNW_REPOURL - repo url base for downloading maven document distribution
-#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven document
+#   JAVA_HOME - location of a JDK home dir, required when download mavenDocument via java source
+#   MVNW_REPOURL - repo url base for downloading mavenDocument distribution
+#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading mavenDocument
 #   MVNW_VERBOSE - true: enable verbose log; debug: trace the mvnw script; others: silence the output
 # ----------------------------------------------------------------------------
 
@@ -97,7 +97,7 @@ die() {
   exit 1
 }
 
-# parse distributionUrl and optional distributionSha256Sum, requires .mvn/wrapper/maven document-wrapper.properties
+# parse distributionUrl and optional distributionSha256Sum, requires .mvn/wrapper/mavenDocument-wrapper.properties
 while IFS="=" read -r key value; do
   case "${key-}" in
   distributionUrl) distributionUrl="${value-}" ;;
@@ -126,7 +126,7 @@ maven document-mvnd-*) MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven document/mvnd/ 
 esac
 
 # apply MVNW_REPOURL and calculate MAVEN_HOME
-# maven document home pattern: ~/.m2/wrapper/dists/{apache-maven document-<version>,maven document-mvnd-<version>-<platform>}/<hash>
+# mavenDocument home pattern: ~/.m2/wrapper/dists/{apache-mavenDocument-<version>,mavenDocument-mvnd-<version>-<platform>}/<hash>
 [ -z "${MVNW_REPOURL-}" ] || distributionUrl="$MVNW_REPOURL$_MVNW_REPO_PATTERN${distributionUrl#*"$_MVNW_REPO_PATTERN"}"
 distributionUrlName="${distributionUrl##*/}"
 distributionUrlNameMain="${distributionUrlName%.*}"

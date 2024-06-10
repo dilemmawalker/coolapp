@@ -19,3 +19,6 @@ Use https://central.sonatype.com/ to get list of dependencies for a particular m
 
 There are multiple spring boot actuator endpoints which are exposed to help with application status, health, etc.
 
+Ways to run application using terminal:
+1. java -jar coolapp-0.0.1-SNAPSHOT.jar(in target)
+2. mvn spring-boot:run(in coolapp)
