@@ -1,0 +1,43 @@
+Spring container has 2 f(x)s:
+1. Create & manage objects(Inversion of Control)
+2. Inject Object Dependencies(Dependency Injection)
+
+3 ways to configure spring container:
+1. XML Configuration(not preferred)
+2. Java Annotations
+3. Java Source Code
+
+Injection Types:
+1. Constructor injection -> Used when we have required dependencies
+2. Setter injection -> Used when we have optional dependencies
+
+Spring Autowiring: Used for dependency Injection
+Spring looks for a class/interface that matches & injects it automatically.
+
+-----------------------------------------------------------------------------------------------------------
+
+Dependency Injection using Constructor steps:
+1. Define dependency interface & class -> Using @Component annotation.
+2. Create demo rest controller.
+3. Create constructor in rest controller class for injections.
+4. Add @GetMapping to rest controller class.
+
+@Controller-> Marks the class as a Spring Bean.
+Bean is a regular Java class managed by Spring.
+Also makes bean available for dependency injection.;
+
+Dependency Injection using Setter steps:
+1. Create setter method in rest controller class.
+2. Configure dependency injection with @Autowired Annotation.
+
+Field Injection is a non-recommended process by spring team because it's harder to unit test using it.
+
+--------------------------------------------------------------------------------------------------------
+
+Qualifiers:
+Used to determine which bean to be used when multiple are present.
+public springCoreController(Coach theCoach) ->
+public springCoreController(@Qualifier("cricketCoach") Coach theCoach)
+Qualifier uses same name as class, except 1st character is lowercase.
+
+Primary: Specifies in case of multiple beans, which one to default pick.
