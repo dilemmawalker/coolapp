@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class springCoreController {
 
+    //Field Injection(Most commonly used, harder to unit test)
+//    @Autowired
+//    @Qualifier("cricketCoach")
+//    private Coach mycoach;
+
     private Coach mycoach;
 
     //this is Constructor injection in Spring Boot
