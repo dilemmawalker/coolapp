@@ -19,7 +19,7 @@ public class FunRestController {
     public String working(){
         return "I am not working";
     }
-
+    
     @GetMapping("/hardoop")
     public String hardoop(){
         return "I am a hardoop";
